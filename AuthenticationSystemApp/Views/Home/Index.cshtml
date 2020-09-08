@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+@using Microsoft.AspNetCore.Identity
+@using AuthenticationSystemApp.Areas.Identity.Data
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @UserManager.GetUserAsync(User).Result.FirstName!</h1>
+</div>
